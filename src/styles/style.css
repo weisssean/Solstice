@@ -1,0 +1,140 @@
+#app {
+  font: 14px "Helvetica Neue", Helvetuca, Ariel, sans-serif;
+  color: #4d4d4d;
+  min-width: 550px;
+  /*max-width: 850px;*/
+  margin: 0 auto;
+}
+
+a.active {
+  color: orange;
+}
+
+nav {
+  padding-top: 20px;
+}
+
+.main_content_holder {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+.home-page-main-holder {
+  /*margin: 0 1rem 5rem 1rem !important;*/
+  height: 100%;
+}
+
+.home-row {
+  /*height: 33%;*/
+  min-height: 250px;
+  padding: 1rem 0;
+}
+
+.home-col {
+  /*border: 1px solid gray;*/
+  /*border-radius: 7px;*/
+  overflow-y: scroll;
+  /*margin-left: -15px;*/
+  /*margin-right: -15px;*/
+  /*padding-right: 0 !important;*/
+  /*padding-left: 0 !important;*/
+
+}
+
+.home-page-main-holder .user-image {
+  border-radius: 50%;
+  border: 1px solid darkorange;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+
+.btn-export {
+  position: fixed !important;
+  border-radius: 50% !important;
+  padding: 8px !important;
+  font-size: initial !important;
+  line-height: initial !important;
+}
+
+.btn-print {
+  bottom: 10px !important;
+  right: 10px !important;
+}
+
+.btn-excel {
+  bottom: 10px !important;
+  right: 65px !important;
+}
+
+.testpoint-report-nav {
+  left: 165px !important;
+  top: 10px !important;
+  width: calc(100% - 175px);
+  transition: all 0.3s ease;
+}
+
+.show .testpoint-report-nav {
+  left: 380px !important;
+  width: calc(100% - 390px);
+}
+
+.hide_line_widget .testpoint-report-nav {
+  width: calc(100% - 75px);
+  left: 65px !important;
+
+}
+
+.show .hide_line_widget .testpoint-report-nav {
+  left: 230px !important;
+  width: calc(100% - 240px);
+
+}
+
+.testpoint-report-nav .nav-item {
+  margin: 0 5px;
+}
+
+/*overriding select 2 height*/
+.select2-container .select2-selection--single {
+  height: 33px !important;
+}
+
+.route-report-page, .testpoint-report-page, .non-compliant-report-page {
+  position: absolute;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  padding-left: 100px;
+  right: 0;
+  overflow-x: scroll;
+}
+
+.show .route-report-page, .show .testpoint-report-page, .show .non-compliant-report-page {
+  padding-left: 150px;
+}
+
+.non-complieat-content {
+  /*margin: 20px;*/
+}
+
+.drag-over {
+  border: solid 2px orange;
+  border-radius: 5px;
+  margin: -2px -2px;
+}
+
+.toggle-assign-menu {
+  border: none !important;
+  background: none !important;
+  float: right;
+}
+
+.blackandwhite {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
