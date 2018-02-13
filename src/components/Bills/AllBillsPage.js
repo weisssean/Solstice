@@ -29,8 +29,10 @@ class AllBillsPage extends React.Component {
         <img src="./assets/images/solstice-text-logo.png"
              placeholder="Solstice"
              height={100}/>
-        <Row className="home-row">
-          <Table>
+
+        <Row className="home-row scroll-table">
+
+          <Table className="">
             <thead>
             <tr>
               <th>Month</th>
@@ -64,9 +66,22 @@ class AllBillsPage extends React.Component {
           </Table>
         </Row>
         <Row>
-          <Col  sm={4} xs={12} ><AllBillsPie field={"kwh"} label={`Total KWH: ${this.getSum(bills,"kwh")}`}/></Col>
-          <Col  sm={4} xs={12} ><AllBillsPie field={"bill"} label={`Total Bills: $${this.getSum(bills,"bill")}`}/></Col>
-          <Col  sm={4} xs={12} ><AllBillsPie field={"savings"} label={`Total Savings: $${this.getSum(bills,"savings")}`}/></Col>
+          <Col md={4} sm={12} xs={12} >
+            <AllBillsPie field={"kwh"} label={`Total KWH: ${this.getSum(bills,"kwh")}`}/>
+            <br/>
+            <br/>
+          </Col>
+
+          <Col  md={4} sm={12} xs={12} >
+            <AllBillsPie field={"bill"} label={`Total Bills: $${this.getSum(bills,"bill")}`}/>
+            <br/>
+            <br/>
+          </Col>
+          <Col  md={4} sm={12}xs={12} >
+            <AllBillsPie field={"savings"} label={`Total Savings: $${this.getSum(bills,"savings")}`}/>
+            <br/>
+            <br/>
+          </Col>
         </Row>
       </div>
     );

@@ -17,7 +17,7 @@ class BillsChart1 extends React.Component {
           legend: {
             position: 'bottom'
           },
-          cutoutPercentage: 75,
+          cutoutPercentage: 50,
           maintainAspectRatio: false
         }} data={data}
                   width={20}

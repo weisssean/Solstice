@@ -45,8 +45,8 @@ function mapStateToProps(state, ownProps) {
       labels: Array.from(state.bills, bill => months[bill.month - 1]),
       datasets: [{
         data: Array.from(state.bills, bill => bill[ownProps.field]),
-        backgroundColor: chartColors.slice(0, state.bills.length),
-        hoverBackgroundColor: chartHoverColors.slice(0, state.bills.length)
+        backgroundColor: chartHoverColors.slice(0, state.bills.length),
+        hoverBackgroundColor: chartColors.slice(0, state.bills.length)
       }]
     }
 

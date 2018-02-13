@@ -33,7 +33,7 @@ const Info = () => {
                 <b>Redux</b> for managing state in a centralized store
               </ListGroupItemHeading>
               <ListGroupItemHeading>
-                <b>Webpack</b> for creating distribution and debug packages
+                <b>Webpack</b>  for creating debug and release builds
               </ListGroupItemHeading>
               <ListGroupItemHeading>
                 <b>reactstrap</b> bootstrap react library

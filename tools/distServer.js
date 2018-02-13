@@ -15,10 +15,10 @@ app.use(compression());
 app.use(express.static('dist'));
 
 
-app.use(favicon(path.join(__dirname, "..","source","assets", "images", "solstice-logo.png")));
+app.use(favicon(path.join(__dirname, "..","src","assets", "images", "solstice-logo.png")));
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../dist/index.php'));
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(port, function (err) {

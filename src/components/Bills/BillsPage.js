@@ -23,7 +23,7 @@ class BillsPage extends React.Component {
         <img  src="./assets/images/solstice-text-logo.png"
               placeholder="Solstice"
         height={100}/>
-        <Row className="home-row">
+        <Row className="home-row scroll-table">
           <Table>
             <thead>
             <tr>

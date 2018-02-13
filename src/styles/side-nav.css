@@ -34,12 +34,6 @@
   overflow-y: scroll;
 }
 
-.card-title {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
 .main_content {
   transition: all 0.3s ease;
   height: 100%;
@@ -51,11 +45,13 @@
   width: calc(100% - 55px) !important;
 
 }
-
-.main_content.show {
-  left: 220px;
-  width: calc(100% - 220px) !important;;
+@media all and (min-width: 799px) {
+  .main_content.show {
+    left: 220px;
+    width: calc(100% - 220px) !important;;
+  }
 }
+
 
 /*Nav list*/
 .sidenav .users-list, .sidenav .test-point-list {
@@ -74,12 +70,6 @@
 
 }
 
-.test-point-list .list-group-item:last-child, .userslist .list-group-item:last-child {
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  /*border-top: solid orange 1px;*/
-  border: none;
-}
 
 .users-list .list-group-item {
   background: transparent;
@@ -94,39 +84,9 @@
   margin-bottom: 0;
 }
 
-.users-list .list-group-item.active, .users-list .list-group-item.active:focus, .users-list .list-group-item.active:hover {
-  z-index: 2;
-  color: black;
-  background-color: orange;
-  /*border-color: darkorange;*/
-  border: none;
-}
-
-.users-list .list-group-item .list-group-item-text {
-  color: #aaa;
-  margin-bottom: 10px;
-  font-size: small;
-}
-
-.users-list .list-group-item.active .list-group-item-text, .users-list .list-group-item.active:focus .list-group-item-text, .users-list .list-group-item:hover .list-group-item-text {
-  color: #888;
-}
-
-/*.test-point-list .list-group-item.active:hover, .users-list .list-group-item:hover {*/
-/*background: #ffAA00;*/
-/*color: black;*/
-/*}*/
-
 .test-point-list .list-group-item-heading:hover, .users-list .list-group-item-heading:hover {
   /*background: #555;*/
   color: darkorange;
-}
-
-.test-point-list .btn-default, .users-list .btn-default, .builder_side_container .btn-primary {
-  background: #555;
-  color: orange;
-  /*border: 1px solid orange;*/
-  border: none;
 }
 
 .test-point-list .active .list-group-item-heading,
@@ -199,10 +159,6 @@
 .btn-home .fa-home {
   font-size: 1.5em !important;
   transition: all 0.3s ease;
-}
-
-.show .btn-home .fa-home {
-  font-size: 2em !important;
 }
 
 .sidenav .btn-home {
@@ -354,10 +310,6 @@
   color: orange;
   /*border: 1px solid orange;*/
   border: none;
-}
-
-.nav-links-list .active .list-group-item-heading {
-  color: #273135;
 }
 
 .desc_name{
