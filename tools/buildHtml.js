@@ -4,7 +4,9 @@ import cheerio from 'cheerio';
 
 /* eslint-disable no-console */
 
-fs.createReadStream('src/index.html').pipe(fs.createWriteStream('dist/index.html'));
+fs.createReadStream('public/index.html').pipe(fs.createWriteStream('dist/index.html'));
+fs.createReadStream('public/bills.php').pipe(fs.createWriteStream('dist/bills.php'));
+fs.createReadStream('public/user.php').pipe(fs.createWriteStream('dist/user.php'));
 
 // fs.readFile('src/index.php', 'utf8', (err, markup) => {
 //   if (err) {

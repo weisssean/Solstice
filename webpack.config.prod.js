@@ -27,7 +27,7 @@ export default {
 
     new CopyWebpackPlugin([
       {from: 'src/assets/images', to: 'assets/images'}
-      // ,{ from: 'src/assets/data', to:'assets/data' }
+      ,{ from: 'src/assets/data', to:'assets/data' }
     ])
 
   ],

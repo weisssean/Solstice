@@ -57,7 +57,6 @@
     "express": "4.13.4",
     "file-loader": "0.8.5",
     "jsdom": "8.5.0",
-    "json-server": "^0.12.0",
     "mocha": "2.4.5",
     "nock": "8.0.0",
     "npm-run-all": "^1.8.0",
@@ -74,7 +73,7 @@
   },
   "scripts": {
     "prestart": "babel-node tools/startMessage.js",
-    "start": "npm-run-all --parallel open:src lint:watch test:watch api",
+    "start": "npm-run-all --parallel open:src lint:watch test:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
@@ -85,7 +84,6 @@
     "build:html": "babel-node tools/buildHtml.js",
     "prebuild": "npm-run-all clean-dist test lint build:html",
     "build": "babel-node tools/build.js",
-    "postbuild": "babel-node tools/distServer.js",
-    "api": "json-server --watch tools/db.json --port 3004"
+    "postbuild": "babel-node tools/distServer.js"
   }
 }
