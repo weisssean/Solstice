@@ -36,6 +36,12 @@ const Info = () => {
                 <b>Webpack</b>  for creating debug and release builds
               </ListGroupItemHeading>
               <ListGroupItemHeading>
+                <b>PHP</b>  for creating a serverside API
+              </ListGroupItemHeading>
+              <ListGroupItemHeading>
+                <b>Express</b>  for creating a node development server and API
+              </ListGroupItemHeading>
+              <ListGroupItemHeading>
                 <b>reactstrap</b> bootstrap react library
               </ListGroupItemHeading>
               <ListGroupItemHeading>

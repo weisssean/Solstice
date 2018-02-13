@@ -3,9 +3,8 @@ import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import PropTypes from 'prop-types';
 import * as solsticeActions from "../../actions/solsticeActions";
-import {months} from '../../assets/utils'
-import {Col, ListGroup, ListGroupItem, ListGroupItemHeading, Table,Row} from 'reactstrap';
-import toastr from 'toastr';
+import {months} from '../../assets/utils';
+import {Row, Table} from 'reactstrap';
 import {withRouter} from "react-router-dom";
 
 class BillsPage extends React.Component {
@@ -17,12 +16,12 @@ class BillsPage extends React.Component {
 
 
   render() {
-    const {bill}= this.props;
+    const {bill} = this.props;
     return (
       <div className="container-fluid home-page-main-holder">
-        <img  src="./assets/images/solstice-text-logo.png"
-              placeholder="Solstice"
-        height={100}/>
+        <img src="./assets/images/solstice-text-logo.png"
+             placeholder="Solstice"
+             height={100}/>
         <Row className="home-row scroll-table">
           <Table>
             <thead>
@@ -36,14 +35,14 @@ class BillsPage extends React.Component {
             </thead>
             <tbody>
             {
-                <tr>
-                  <td>{months[bill.month-1]}</td>
-                  <td>{bill.year}</td>
-                  <td>{bill.kwh}</td>
-                  <td>{`$${bill.bill}`}</td>
-                  <td>{`$${bill.savings}`}</td>
-                </tr>
-              }
+              <tr>
+                <td>{months[bill.month - 1]}</td>
+                <td>{bill.year}</td>
+                <td>{bill.kwh}</td>
+                <td>{`$${bill.bill}`}</td>
+                <td>{`$${bill.savings}`}</td>
+              </tr>
+            }
             </tbody>
           </Table>
         </Row>
@@ -54,17 +53,18 @@ class BillsPage extends React.Component {
 
 
 BillsPage.propTypes = {
+  bill: PropTypes.object.isRequired
 };
 
 //redux connect and map functions
 function mapStateToProps(state, ownProps) {
   const bills = state.bills;
-  const bill = bills.filter(b=>b.id===  ownProps.match.params.id)[0];
-  if(!bill){
+  const bill = bills.filter(b => b.id === ownProps.match.params.id)[0];
+  if (!bill) {
     ownProps.history.push("/");
   }
   return {
-    bill:bill
+    bill: bill
   };
 
 }

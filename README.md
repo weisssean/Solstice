@@ -13,5 +13,7 @@ This approach helps by improving performance, providing a centralized api, and h
 * `reactstrap` bootstrap react library
 * `font-awesome` icon package
 * `react-chartjs2` chart library
+* `PHP`  for creating a serverside API
+* `Express`  for creating a node development server and API
 * `axios` for ajax calls
 * `More...` 
